@@ -1,0 +1,40 @@
+project_name: steganography-go
+env:
+  - GO111MODULE=on
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: .
+    binary: steganography
+    ldflags:
+      - -s -w
+    env:
+      - CGO_ENABLED=0
+archives:
+  - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+    replacements:
+      darwin: darwin
+      linux: linux
+      windows: windows
+      386: i386
+      amd64: x86_64
+    format_overrides:
+      - goos: windows
+        format: zip
+release:
+  prerelease: auto
+nfpms:
+  -
+    id: steganography-nfpms
+    package_name: steganography
+    homepage: https://github.com/transnano/steganography-go
+    maintainer: Transnano <transnano.jp@gmail.com>
+    description: Embed confidential information in png image.
+    license: Apache 2.0
+    formats:
+      - deb
+      - rpm
+    bindir: /usr/bin
+    epoch: 1
+    release: 1
