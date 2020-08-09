@@ -1,4 +1,4 @@
-FROM golang:1.14.6
+FROM golang:1.14.7
 WORKDIR /go/src/github.com/transnano/steganography-go/
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -o steganography -ldflags "-s -w"
