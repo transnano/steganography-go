@@ -1,3 +1,3 @@
 module github.com/transnano/steganography-go
 
-go 1.14
+go 1.15
