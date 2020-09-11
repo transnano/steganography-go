@@ -20,7 +20,7 @@ COPY . .
 RUN  go build -a -o steganography -ldflags "-s -w"
 
 # Now copy it into our base image.
-FROM gcr.io/distroless/base-debian10
+FROM gcr.io/distroless/base-debian10:latest
 #FROM gcr.io/distroless/base
 LABEL maintainer="Transnano <transnano.jp@gmail.com>"
 COPY --from=build /go/src/github.com/transnano/steganography-go/steganography /
