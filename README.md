@@ -1,4 +1,4 @@
-# steganography-go ![Releases](https://github.com/transnano/steganography-go/workflows/Releases/badge.svg) ![Publish Docker image](https://github.com/transnano/steganography-go/workflows/Publish%20Docker%20image/badge.svg) ![Vulnerability Scan](https://github.com/transnano/steganography-go/workflows/Vulnerability%20Scan/badge.svg)
+# steganography-go ![Releases](https://github.com/transnano/steganography-go/workflows/Releases/badge.svg) ![Publish Docker image](https://github.com/transnano/steganography-go/workflows/Publish%20Docker%20image/badge.svg) ![Vulnerability Scan](https://github.com/transnano/steganography-go/workflows/Vulnerability%20Scan/badge.svg) ![Code Scanning(CodeQL)](https://github.com/transnano/pagerduty-api/workflows/Code%20Scanning(CodeQL)/badge.svg)
 
 ![License](https://img.shields.io/github/license/transnano/steganography-go?style=flat)
 
